@@ -21,6 +21,11 @@ const TdTimeLabelText = styled.div`
   z-index: 1;
   color: ${props => props.theme.calendar_time_color};
   font-size: 18px;
+
+  @media (max-width: 600px) {
+    bottom: -9px;
+    font-size: 12px;
+  }
 `;
 
 class Week extends Component {
