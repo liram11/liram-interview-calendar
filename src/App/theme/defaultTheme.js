@@ -1,5 +1,5 @@
 export const defaultTheme = {
-  body_bg: '#aaa',
+  body_bg: '#ccc',
   calendar_bg: '#fff',
   calendar_control_bg: '#eee',
   calendar_border: '#e6e6e6',
