@@ -12,9 +12,13 @@ const NavDay = styled(Td)`
 
 const NavDayName = styled.div`
   text-align: center;
-  padding: 10px 0;
-  font-size: 20px;
+  padding: 7px 0;
+  font-size: 16px;
   font-weight: bold;
+
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
 `;
 
 const NavDayValue = styled.div`
@@ -24,7 +28,7 @@ const NavDayValue = styled.div`
   margin: auto;
   line-height: 50px;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 26px;
 
   ${({ active }) =>
     active &&
@@ -33,12 +37,29 @@ const NavDayValue = styled.div`
     background-color:red;
     color: #fff;
   `}
+
+  @media (max-width: 600px) {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+  }
+`;
+
+const NavTd = styled(Td)`
+  @media (max-width: 600px) {
+    height: 45px;
+  }
 `;
 
 const NavCurrentMonth = styled.td`
   font-size: 24px;
   font-weight: bold;
   text-align: center;
+
+  @media (max-width: 600px) {
+    font-size: 18px;
+  }
 `;
 
 const NextWeek = styled.div`
@@ -50,6 +71,12 @@ const NextWeek = styled.div`
   height: 40px;
   margin: auto;
   cursor: pointer;
+
+  @media (max-width: 600px) {
+    background-size: 20px 20px;
+    width: 30px;
+    height: 30px;
+  }
 `;
 
 const PrevWeek = styled(NextWeek)`
@@ -89,16 +116,16 @@ class Nav extends Component {
             {days}
           </Tr>
           <Tr>
-            <Td />
-            <Td>
+            <NavTd />
+            <NavTd>
               <PrevWeek onClick={() => this.props.prevWeek()} />
-            </Td>
+            </NavTd>
             <NavCurrentMonth colSpan="5">
               {this.props.date.format('MMMM YYYY')}
             </NavCurrentMonth>
-            <Td>
+            <NavTd>
               <NextWeek onClick={() => this.props.nextWeek()} />
-            </Td>
+            </NavTd>
           </Tr>
         </Tbody>
       </Table>

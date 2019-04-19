@@ -7,6 +7,10 @@ const ControlsTd = styled(Td)`
   width: 50%;
   font-size: 28px;
   color: red;
+
+  @media (max-width: 600px) {
+    font-size: 22px;
+  }
 `;
 
 const Today = styled.div`

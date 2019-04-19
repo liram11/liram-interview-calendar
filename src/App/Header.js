@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import plus from './img/svg/plus.svg';
 
 const HeaderWrapper = styled.header`
-  height: 130px;
+  height: 80px;
   position: sticky;
   z-index: 20;
   top: 0;
@@ -16,14 +16,18 @@ const HeaderWrapper = styled.header`
 const HeaderText = styled.div`
   text-align: left;
   font-size: 24px;
-  padding: 50px 0 0 50px;
+  padding: 25px 0 0 50px;
   float: left;
+
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
 `;
 
 const HeaderAddWrapper = styled.div`
   text-align: right;
   font-size: 24px;
-  padding: 50px 50px 0 0;
+  padding: 25px 50px 0 0;
   float: right;
 `;
 

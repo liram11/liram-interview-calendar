@@ -25,7 +25,7 @@ const CalendarNav = styled.div`
   border-bottom: 2px solid ${props => props.theme.calendar_border};
   position: fixed;
   z-index: 99;
-  top: 130px;
+  top: 80px;
   max-width: 740px;
   width: 100%;
 `;
@@ -33,6 +33,10 @@ const CalendarNav = styled.div`
 const CalendarMain = styled.div`
   margin-top: 140px;
   margin-bottom: 70px;
+
+  @media (max-width: 600px) {
+    margin-top: 100px;
+  }
 `;
 
 const CalendarBottom = styled.div`
